@@ -367,8 +367,8 @@ class Reward:
 
         # Reward if less steps
         REWARD_PER_STEP_FOR_FASTEST_TIME = 1
-        STANDARD_TIME = 37
-        FASTEST_TIME = 27
+        STANDARD_TIME = 16
+        FASTEST_TIME = 8
         times_list = [row[3] for row in racing_track]
         projected_time = projected_time(
             self.first_racingpoint_index, closest_index, steps, times_list)
@@ -395,10 +395,10 @@ class Reward:
 
         ## Incentive for finishing the lap in less steps ##
         # should be adapted to track length and other rewards
-        REWARD_FOR_FASTEST_TIME = 1500
-        STANDARD_TIME = 37  # seconds (time that is easily done by model)
-        FASTEST_TIME = 27  # seconds (best time of 1st place on the track)
-        if progress == 100:
+        REWARD_FOR_FASTEST_TIME = 500
+        STANDARD_TIME = 16  # seconds (time that is easily done by model)
+        FASTEST_TIME = 8  # seconds (best time of 1st place on the track)
+        if progress > 99.5 :
             finish_reward = max(1e-3, (-REWARD_FOR_FASTEST_TIME /
                                        (15*(STANDARD_TIME-FASTEST_TIME)))*(steps-STANDARD_TIME*15))
         else:
@@ -414,8 +414,7 @@ class Reward:
         if self.verbose == True:
             print("Closest index: %i" % closest_index)
             print("Distance to racing line: %f" % dist)
-            print("=== Distance reward (w/out multiple): %f ===" %
-                  (distance_reward))
+            print("=== Distance reward (w/out multiple): %f ===" % (distance_reward))
             print("Optimal speed: %f" % optimals[2])
             print("Speed difference: %f" % speed_diff)
             print("=== Speed reward (w/out multiple): %f ===" % speed_reward)

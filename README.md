@@ -1,13 +1,16 @@
-# Capstone Project : ESADE Business School에서 비즈니스 분석 석사 과정용
+
 
 *AWSKRUG에서 활용을 위해 ReInvent2019의 기본 데이터로 바꾸었습니다.
 원문은 아래 깃헙과 블로그를 참고하세요. 구글 번역기로 대충 번역 해 두었습니다.
-`dummy-model-for-import/model/model_metadata.json`의 `action_space`를 계산된 값으로 바꾸고 S3로 업로드 후 import_model하고 다시 clone 해서 사용하세요.
-`reward_function`과 `hyperparameter`는 model을 clone할 때 변경 가능합니다.*
+`dummy-model-for-import/model/model_metadata.json`의 `action_space`를 계산된 값으로 바꾸고 
+dummy-model-for-import를 통째로 S3로 업로드 후 import_model하고 다시 clone 해서 사용하세요.
+`reward function`과 `hyperparameter`는 model을 clone할 때 변경 가능합니다.*
 
 [원본 깃헙](https://github.com/dgnzlz/Capstone_AWS_DeepRacer) , [설명 블로그](https://towardsdatascience.com/an-advanced-guide-to-aws-deepracer-2b462c37eea)
 
 ----
+# Capstone Project : ESADE Business School 비즈니스 분석 석사 과정용
+
 **이 리포지토리에는 "A Advanced Guide to AWS DeepRacer-Autonomous Formula 1 Racing using Reinforcement Learning"기사에 사용 된 코드가 포함되어 있습니다. 먼저 [여기를 클릭](https://towardsdatascience.com/an-advanced-guide-to-aws-deepracer-2b462c37eea)해서 블로그의 내용을 읽어 보시길 바랍니다.**
 
 
